@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NMD Solutions | Your Business Builds Credit</title>
+<meta name="description" content="Your company gets invoiced on Net 30 terms, pays from its business bank, and builds its own credit file. $150 a month. Coaching, vendor roadmap, AI bot, and community. By NMD Solutions.">
+<meta name="theme-color" content="#0b0b0d">
+<meta property="og:title" content="Your Business Builds Credit. Without Loans. Without a Personal Credit Check.">
+<meta property="og:description" content="Invoiced to your LLC on Net 30 terms. Paid from the business bank. Payment history built for the company, not you. $150 a month.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0d'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='38' font-weight='900' fill='%23DC143C' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0b0b0d;
+    --panel:#141417;
+    --panel-2:#0f0f12;
+    --line:#26262c;
+    --text:#f2f2f4;
+    --muted:#a6a6ae;
+    --crimson:#DC143C;
+    --crimson-hot:#ff2d55;
+    --crimson-soft:rgba(220,20,60,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%}
+  a{color:var(--crimson-hot)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
+  @media(min-width:760px){section{padding:104px 0}}
+
+  /* type */
+  h1,h2,h3{font-weight:900;line-height:1.08;letter-spacing:-.01em}
+  h1{font-size:clamp(2.1rem,7.5vw,4.1rem)}
+  h2{font-size:clamp(1.7rem,5vw,2.7rem);margin-bottom:14px}
+  h3{font-size:1.15rem;margin-bottom:8px}
+  .eyebrow{
+    color:var(--crimson);font-weight:800;text-transform:uppercase;
+    letter-spacing:.2em;font-size:.75rem;margin-bottom:16px;display:block;
+  }
+  .lead{color:var(--muted);font-size:1.05rem;max-width:640px;margin-bottom:36px}
+  .hl{color:var(--crimson)}
+
+  /* buttons */
+  .btn{
+    display:inline-block;background:var(--crimson);color:#fff;text-decoration:none;
+    font-weight:800;font-size:1.05rem;padding:17px 32px;border-radius:12px;
+    box-shadow:0 10px 34px rgba(220,20,60,.35);
+    transition:transform .15s ease,background .15s ease,box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);background:var(--crimson-hot);box-shadow:0 14px 40px rgba(220,20,60,.5)}
+  .btn:active{transform:translateY(0)}
+  .cta-row{margin-top:40px;text-align:center}
+  .cta-note{display:block;color:var(--muted);font-size:.85rem;margin-top:12px}
+
+  /* top bar */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,11,13,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:13px;padding-bottom:13px}
+  .brand{font-weight:900;letter-spacing:.08em;font-size:1rem;color:var(--text);text-decoration:none}
+  .brand b{color:var(--crimson)}
+  .btn.mini{padding:10px 18px;font-size:.9rem;border-radius:10px;box-shadow:none}
+
+  /* hero */
+  .hero{
+    border-bottom:1px solid var(--line);
+    padding:84px 0 92px;
+    background:
+      radial-gradient(1100px 560px at 75% -12%,rgba(220,20,60,.20),transparent 62%),
+      radial-gradient(760px 420px at 8% 108%,rgba(220,20,60,.10),transparent 60%);
+  }
+  @media(min-width:760px){.hero{padding:130px 0 130px}}
+  .hero .lead{font-size:1.13rem;margin-top:22px}
+  .hero .cta-row{text-align:left;margin-top:34px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .chip{
+    border:1px solid var(--line);background:var(--panel-2);color:var(--muted);
+    font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:999px;
+  }
+  .chip::before{content:"✓";color:var(--crimson);font-weight:900;margin-right:8px}
+
+  /* unlocks */
+  .unlocks{border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .unlock-head{display:none}
+  .unlock-row{display:grid;grid-template-columns:1fr;border-bottom:1px solid var(--line);background:var(--panel-2)}
+  .unlock-row:last-child{border-bottom:none}
+  .u-what{padding:18px 20px 4px;font-weight:800;font-size:1.02rem}
+  .u-what::before{content:"UNLOCK";display:block;color:var(--crimson);font-size:.68rem;letter-spacing:.18em;font-weight:800;margin-bottom:4px}
+  .u-how{padding:0 20px 18px;color:var(--muted);font-size:.95rem}
+  @media(min-width:760px){
+    .unlock-head{display:grid;grid-template-columns:1fr 1.7fr;background:var(--panel);border-bottom:1px solid var(--line)}
+    .unlock-head div{padding:13px 22px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:800}
+    .unlock-row{grid-template-columns:1fr 1.7fr}
+    .u-what{padding:22px;display:flex;align-items:center}
+    .u-what::before{display:none}
+    .u-how{padding:22px;border-left:1px solid var(--line);display:flex;align-items:center}
+  }
+
+  /* mechanism */
+  .steps{display:grid;gap:16px}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:26px 22px;position:relative}
+  .step .num{
+    font-size:2.6rem;font-weight:900;color:var(--crimson);line-height:1;
+    margin-bottom:14px;display:block;
+  }
+  .step p{color:var(--muted);font-size:.95rem}
+  .callout{
+    margin-top:24px;border:1px solid rgba(220,20,60,.4);background:var(--crimson-soft);
+    border-radius:16px;padding:26px 24px;
+  }
+  .callout h3{color:var(--crimson-hot);text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;margin-bottom:10px}
+  .callout p{font-size:1rem}
+
+  /* doors */
+  .doors{display:grid;gap:16px}
+  @media(min-width:760px){.doors{grid-template-columns:repeat(3,1fr)}}
+  .door{
+    background:var(--panel-2);border:1px solid var(--line);border-radius:16px;
+    padding:28px 24px;display:flex;flex-direction:column;
+    transition:border-color .2s ease,transform .2s ease;
+  }
+  .door:hover{border-color:rgba(220,20,60,.55);transform:translateY(-3px)}
+  .kicker{color:var(--crimson);font-weight:800;letter-spacing:.2em;font-size:.68rem;margin-bottom:12px}
+  .door p{color:var(--muted);font-size:.95rem;flex:1}
+  .cmd{
+    display:inline-block;margin-top:18px;align-self:flex-start;
+    border:1px solid rgba(220,20,60,.55);color:var(--crimson-hot);
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.82rem;font-weight:700;padding:8px 14px;border-radius:8px;
+    background:rgba(220,20,60,.06);
+  }
+
+  /* includes */
+  .inc-grid{display:grid;gap:16px}
+  @media(min-width:760px){.inc-grid{grid-template-columns:repeat(2,1fr)}.inc-feat{grid-column:1/-1}}
+  .inc{
+    background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:28px 24px;
+  }
+  .inc p{color:var(--muted);font-size:.95rem}
+  .inc-feat{
+    border-color:rgba(220,20,60,.5);
+    background:linear-gradient(135deg,rgba(220,20,60,.14),var(--panel-2) 55%);
+  }
+  .tag{
+    display:inline-block;background:var(--crimson);color:#fff;font-size:.66rem;font-weight:900;
+    letter-spacing:.18em;padding:5px 10px;border-radius:6px;margin-bottom:14px;
+  }
+  .price-line{
+    display:flex;align-items:baseline;gap:10px;margin:6px 0 26px;flex-wrap:wrap;
+  }
+  .price-line .big{font-size:3rem;font-weight:900;color:var(--text);line-height:1}
+  .price-line .per{color:var(--muted);font-weight:600}
+
+  /* compare */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:16px;background:var(--panel-2)}
+  table.compare{width:100%;border-collapse:collapse;min-width:820px}
+  .compare th,.compare td{padding:16px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:.92rem}
+  .compare tbody tr:last-child th,.compare tbody tr:last-child td{border-bottom:none}
+  .compare thead th{
+    font-size:.78rem;letter-spacing:.04em;color:var(--text);background:var(--panel);
+    font-weight:800;line-height:1.35;
+  }
+  .compare thead th span{display:block;color:var(--muted);font-weight:600;font-size:.75rem;margin-top:3px}
+  .compare tbody th{font-weight:800;color:var(--text);background:var(--panel);font-size:.88rem}
+  .compare td{color:var(--muted)}
+  .compare .us{background:rgba(220,20,60,.09);color:var(--text);font-weight:600}
+  .compare thead th.us{color:var(--crimson-hot)}
+  .foot-note{color:var(--muted);font-size:.8rem;margin-top:14px}
+
+  /* upsell */
+  .upsell{
+    border:1px solid rgba(220,20,60,.55);border-radius:20px;
+    background:
+      radial-gradient(700px 300px at 85% 0%,rgba(220,20,60,.22),transparent 60%),
+      var(--panel-2);
+    padding:44px 26px;text-align:center;
+  }
+  @media(min-width:760px){.upsell{padding:64px 60px}}
+  .upsell p{color:var(--muted);max-width:560px;margin:0 auto}
+
+  /* proof */
+  .quotes{display:grid;gap:16px}
+  @media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+  .quote{
+    border:1.5px dashed var(--line);border-radius:16px;padding:26px 22px;
+    background:var(--panel-2);display:flex;flex-direction:column;
+  }
+  .quote .mark{color:var(--crimson);font-size:2.2rem;font-weight:900;line-height:1;margin-bottom:10px}
+  .quote p{color:var(--muted);font-style:italic;font-size:.92rem;flex:1}
+  .quote .who{margin-top:16px;color:var(--text);font-weight:700;font-size:.85rem;letter-spacing:.06em}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+  @media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{
+    border:1.5px dashed var(--line);border-radius:14px;padding:20px 16px;text-align:center;background:var(--panel-2);
+  }
+  .stat .val{font-size:1.5rem;font-weight:900;color:var(--crimson);letter-spacing:.2em}
+  .stat .lab{color:var(--muted);font-size:.78rem;margin-top:6px}
+
+  /* faq */
+  .faq{border:1px solid var(--line);border-radius:14px;background:var(--panel-2);margin-bottom:12px;overflow:hidden}
+  .faq summary{
+    cursor:pointer;list-style:none;padding:20px 54px 20px 22px;font-weight:800;font-size:1rem;position:relative;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{
+    content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);
+    color:var(--crimson);font-size:1.5rem;font-weight:900;transition:transform .2s ease;
+  }
+  .faq[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+  .faq .a{padding:0 22px 22px;color:var(--muted);font-size:.95rem}
+
+  /* final + footer */
+  .final{
+    text-align:center;border-bottom:none;
+    background:radial-gradient(900px 460px at 50% 120%,rgba(220,20,60,.20),transparent 62%);
+  }
+  .final .lead{margin:0 auto 8px}
+  footer{border-top:1px solid var(--line);padding:44px 0 60px;background:var(--panel-2)}
+  footer .brand{font-size:1.05rem}
+  .persona{color:var(--muted);font-size:.9rem;margin:12px 0 26px}
+  .entity{
+    color:var(--muted);font-size:.85rem;line-height:1.9;
+    border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:inline-block;
+  }
+  .entity b{color:var(--text)}
+  .entity a{color:var(--muted);text-decoration:none}
+  .legal{color:#6f6f77;font-size:.75rem;margin-top:26px;max-width:760px;line-height:1.7}
+  .copy{color:#6f6f77;font-size:.75rem;margin-top:16px}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .btn,.door{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>NMD</b> SOLUTIONS</a>
+    <a class="btn mini" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Start $150/mo</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">NMD Solutions &bull; Operated by NMD ZAZA</span>
+      <h1>Your Business <span class="hl">Builds Credit.</span><br>Without Loans. Without a Personal Credit Check.</h1>
+      <p class="lead">Your company gets invoiced on Net 30 terms for services it already uses. It pays from its business bank account. That payment history builds the company's own credit file. Not yours. The company's.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Start for $150/Month</a>
+        <span class="cta-note">Opens the bot on Telegram. Free to talk first.</span>
+      </div>
+      <div class="chips">
+        <span class="chip">No personal credit pull</span>
+        <span class="chip">No loan</span>
+        <span class="chip">Cancel with 30 days notice</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. WHAT IT UNLOCKS -->
+  <section>
+    <div class="wrap reveal">
+      <span class="eyebrow">01 &bull; What It Unlocks</span>
+      <h2>A Company Credit File Is a Money Tool.</h2>
+      <p class="lead">You are not building a score for bragging rights. You are building access. Here is what a real file opens up, and exactly what drives each one.</p>
+      <div class="unlocks">
+        <div class="unlock-head"><div>What you unlock</div><div>What drives it</div></div>
+        <div class="unlock-row">
+          <div class="u-what">Qualify for business funding</div>
+          <div class="u-how">Lenders read your company's file before they lend. Real payment history gives them something to say yes to. No file, no read, no shot.</div>
+        </div>
+        <div class="unlock-row">
+          <div class="u-what">Higher limits</div>
+          <div class="u-how">Issuers and vendors raise limits for companies that pay on time. Your paid Net 30 invoices are that proof, on paper.</div>
+        </div>
+        <div class="unlock-row">
+          <div class="u-what">Better vendor terms</div>
+          <div class="u-how">Suppliers extend Net 30 and Net 60 to companies with trade history. Trade history means accounts paid on terms. Every paid invoice adds weight to yours.</div>
+        </div>
+        <div class="unlock-row">
+          <div class="u-what">Business and personal fully separated</div>
+          <div class="u-how">The file attaches to your EIN, your company's tax ID. Not your SSN. Your personal report stays out of your business moves.</div>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Build the File</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. THE MECHANISM -->
+  <section>
+    <div class="wrap reveal">
+      <span class="eyebrow">02 &bull; The Mechanism</span>
+      <h2>Three Steps. All Boring. On Purpose.</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <h3>We invoice your LLC</h3>
+          <p>Every month. $150. Net 30 terms. That means the bill is due in 30 days, not on the spot.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h3>Your company pays</h3>
+          <p>From its business bank account, inside the 30 day window. On time, every time. That part is on you.</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h3>It gets recorded and reported</h3>
+          <p>Every payment experience is logged. Bureau reporting is rolling out now. Payment experiences may be reported as bureaus come online.</p>
+        </div>
+      </div>
+      <div class="callout">
+        <h3>Why paying instantly builds nothing</h3>
+        <p>Pay cash on the spot and nothing happens to a credit file. Money out, product in, no story. Credit is trust. It only shows up when someone lets your company pay later and your company keeps its word. An invoice on Net 30 terms is that trust in writing. Paying it inside the window is payment history. History is the only thing a credit file is made of.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Get My First Invoice</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. THREE DOORS -->
+  <section>
+    <div class="wrap reveal">
+      <span class="eyebrow">03 &bull; Three Doors</span>
+      <h2>Start Where You Stand.</h2>
+      <p class="lead">Everybody enters through one of these. Pick yours.</p>
+      <div class="doors">
+        <div class="door">
+          <span class="kicker">Door One</span>
+          <h3>Got an LLC?</h3>
+          <p>You have the company. Now give it a file. Type BUSINESS in the bot and your first invoice can go out this week.</p>
+          <span class="cmd">Type BUSINESS in the bot</span>
+        </div>
+        <div class="door">
+          <span class="kicker">Door Two</span>
+          <h3>No LLC Yet?</h3>
+          <p>Start free. The 10-step wizard walks you from LLC to EIN to DUNS to business bank, in order. EIN is your company's tax ID. DUNS is the number Dun and Bradstreet uses to track your company. No guesswork, just steps.</p>
+          <span class="cmd">Type SETUP in the bot</span>
+        </div>
+        <div class="door">
+          <span class="kicker">Door Three</span>
+          <h3>Already Stacking Vendors?</h3>
+          <p>You know the game. Add a service tradeline, one more account feeding the file. Plus a real human who tells you what to add next and in what order. No more guessing.</p>
+          <span class="cmd">Ask about the roadmap</span>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Pick Your Door</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHAT $150 INCLUDES -->
+  <section>
+    <div class="wrap reveal">
+      <span class="eyebrow">04 &bull; What $150 Includes</span>
+      <h2>One Invoice. Five Things Inside.</h2>
+      <div class="price-line"><span class="big">$150</span><span class="per">per month, invoiced to your LLC on Net 30 terms</span></div>
+      <div class="inc-grid">
+        <div class="inc inc-feat">
+          <span class="tag">The Core</span>
+          <h3>The Net 30 Invoiced Account</h3>
+          <p>The engine. A real monthly invoice to your company on real terms. Your business pays it and the history stacks. This is the tradeline.</p>
+        </div>
+        <div class="inc">
+          <h3>Monthly 1-on-1</h3>
+          <p>A private strategy session with a real operator. Every month. Bring your file, leave with moves.</p>
+        </div>
+        <div class="inc">
+          <h3>The Vendor Roadmap</h3>
+          <p>Bureaus want at least 3 accounts reporting before your company gets scored. We map which net 30 vendors to add and in what order to hit that minimum. No wasted spend.</p>
+        </div>
+        <div class="inc">
+          <h3>The Bot and Free Wizard</h3>
+          <p>AI on Telegram, day and night. Answers, reminders, and the free 10-step business setup wizard.</p>
+        </div>
+        <div class="inc">
+          <h3>The Community</h3>
+          <p>A private room of owners building the same thing. Wins, warnings, vendor intel.</p>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Lock In My Spot</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. COMPARISON -->
+  <section>
+    <div class="wrap reveal">
+      <span class="eyebrow">05 &bull; How We Compare</span>
+      <h2>Same Lane. Different Machines.</h2>
+      <p class="lead">All facts, no trash talk. These are real tools and some may fit you. Here is what each one actually delivers.</p>
+      <div class="table-scroll">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="us">NMD Membership<span>$150/mo</span></th>
+              <th>eCredable Business Lift<span>$19.95/mo</span></th>
+              <th>Nav Prime<span>$49.99/mo</span></th>
+              <th>Typical Net 30 Vendor<span>price varies</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Real service delivered</th>
+              <td class="us">Yes. Coaching, roadmap, bot, community.</td>
+              <td>Reports bills you already pay.</td>
+              <td>Software, reports, and tools.</td>
+              <td>Products you order.</td>
+            </tr>
+            <tr>
+              <th>Monthly 1-on-1 with a human</th>
+              <td class="us">Yes. Every month.</td>
+              <td>No.</td>
+              <td>No.</td>
+              <td>No.</td>
+            </tr>
+            <tr>
+              <th>Net 30 invoice</th>
+              <td class="us">Yes. Real terms, real due date.</td>
+              <td>No. Bill reporting.</td>
+              <td>No. Subscription charge.</td>
+              <td>Yes. On products.</td>
+            </tr>
+            <tr>
+              <th>Roadmap to a full credit file</th>
+              <td class="us">Yes. Mapped to the 3-trade minimum.</td>
+              <td>No.</td>
+              <td>No.</td>
+              <td>No. Products only.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="foot-note">Prices checked September 2026. Their features can change. Verify on their sites.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Get the Full Stack</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. UPSELL -->
+  <section>
+    <div class="wrap reveal">
+      <div class="upsell">
+        <span class="eyebrow">Operators Only</span>
+        <h2>Want to RUN This Instead of Just Use It?</h2>
+        <p>The bot behind this page is for sale as a source license. Your brand on it. Your clients in it. Your invoices going out. If you already move in the credit and funding world, this is your machine, not your membership.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Reply LICENSE in the Bot</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PROOF -->
+  <section>
+    <div class="wrap reveal">
+      <span class="eyebrow">06 &bull; Proof</span>
+      <h2>Real Ones Only.</h2>
+      <p class="lead">No fake reviews. No rented screenshots. These slots stay empty until real members sign off on real words.</p>
+      <div class="quotes">
+        <div class="quote">
+          <span class="mark">&ldquo;</span>
+          <p>Reserved for a real member story. When it is real, it sits here. Not before.</p>
+          <span class="who">MEMBER 001</span>
+        </div>
+        <div class="quote">
+          <span class="mark">&ldquo;</span>
+          <p>Reserved for a real member story. When it is real, it sits here. Not before.</p>
+          <span class="who">MEMBER 002</span>
+        </div>
+        <div class="quote">
+          <span class="mark">&ldquo;</span>
+          <p>Reserved for a real member story. When it is real, it sits here. Not before.</p>
+          <span class="who">MEMBER 003</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="val">&bull;&bull;&bull;</div><div class="lab">Members</div></div>
+        <div class="stat"><div class="val">&bull;&bull;&bull;</div><div class="lab">Invoices paid on time</div></div>
+        <div class="stat"><div class="val">&bull;&bull;&bull;</div><div class="lab">Trades added</div></div>
+        <div class="stat"><div class="val">&bull;&bull;&bull;</div><div class="lab">Bureau acceptances</div></div>
+      </div>
+      <p class="foot-note">Live numbers publish here as they clear. Updates drop in the bot first.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Be Next</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. HONEST FAQ -->
+  <section>
+    <div class="wrap reveal">
+      <span class="eyebrow">07 &bull; Straight Answers</span>
+      <h2>The Honest FAQ.</h2>
+      <p class="lead">No dodging. Ask these same questions to anyone else selling you credit help.</p>
+
+      <details class="faq">
+        <summary>Do you guarantee a score increase?</summary>
+        <div class="a"><p>No. And nobody honest can. Scores come from the bureaus, not from us. Anyone promising you a number is selling you a story. We build real payment history and let the file speak.</p></div>
+      </details>
+      <details class="faq">
+        <summary>Is this a loan or a fix-my-score service?</summary>
+        <div class="a"><p>Neither. Nobody lends you money. Nobody disputes anything. This is a service membership invoiced on net terms. Your company pays for services it actually uses and builds history by paying on time.</p></div>
+      </details>
+      <details class="faq">
+        <summary>Which bureaus do you report to?</summary>
+        <div class="a"><p>Straight answer. Bureau reporting is rolling out now. Payment experiences may be reported as each acceptance goes live. We post live updates in the bot and the community the moment a bureau comes online. We name names when they are real, not before.</p></div>
+      </details>
+      <details class="faq">
+        <summary>What do I need to start?</summary>
+        <div class="a"><p>Three things. An LLC. An EIN, your company's tax ID. A business bank account. Missing any of them? Type SETUP in the bot and the free 10-step wizard walks you through every one.</p></div>
+      </details>
+      <details class="faq">
+        <summary>Can I cancel?</summary>
+        <div class="a"><p>Yes. 30 days notice. No contract. No exit fees. No hard feelings.</p></div>
+      </details>
+
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Talk to the Bot</a>
+        <span class="cta-note">Free to start. The wizard costs nothing.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FINAL CTA -->
+  <section class="final">
+    <div class="wrap reveal">
+      <span class="eyebrow">The Move</span>
+      <h2>Give Your Company Its Own Credit File.</h2>
+      <p class="lead">Invoiced to the LLC. Paid by the business. Built for the business.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://t.me/ScoreBoostByNMDBot" target="_blank" rel="noopener">Start for $150/Month</a>
+        <span class="cta-note">Opens Telegram. @ScoreBoostByNMDBot</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand"><b>NMD</b> SOLUTIONS</span>
+    <p class="persona">The mask stays on. The work shows up. NMD ZAZA.</p>
+    <div class="entity">
+      <b>Tokyoplug LLC</b> &bull; 4539 N 22nd St #5727 &bull; Phoenix, AZ 85016<br>
+      D-U-N-S 08-068-7030 &bull; Phone <a href="tel:+19543475570">(954) 347-5570</a>
+    </div>
+    <p class="legal">NMD Solutions membership is a service subscription invoiced to your company on Net 30 terms. It is not a loan and it is not legal, tax, or financial advice. No score outcome, funding amount, or reporting placement is guaranteed. Bureau reporting is rolling out now and payment experiences may be reported as acceptances go live. Results depend on your company's own payment behavior.</p>
+    <p class="copy">&copy; 2026 Tokyoplug LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var els=document.querySelectorAll(".reveal");
+    if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}
+      });
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+
+</body>
+</html>
