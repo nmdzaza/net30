@@ -50,7 +50,7 @@
 
   /* signature pill button with arrow chip */
   .pill{
-    display:inline-flex;align-items:center;gap:14px;
+    display:inline-flex;align-items:center;gap:14px;white-space:nowrap;
     background:linear-gradient(90deg,var(--cr),var(--cr2));
     color:#fff;text-decoration:none;font-weight:700;font-size:1rem;
     padding:9px 9px 9px 28px;border-radius:999px;
@@ -83,6 +83,12 @@
   .lockup .name{display:block;font-weight:900;letter-spacing:.1em;font-size:1.02rem;color:var(--ink)}
   .lockup .name b{color:var(--cr2)}
   .lockup .tag{display:block;font-size:.62rem;letter-spacing:.14em;color:var(--mut);text-transform:uppercase}
+  @media(max-width:480px){
+    .lockup .name{font-size:.88rem}
+    .lockup .tag{font-size:.55rem}
+    .topbar .pill{font-size:.78rem;padding:6px 6px 6px 14px;gap:8px}
+    .topbar .pill .arr{width:26px;height:26px}
+  }
 
   /* hero */
   .hero{
@@ -115,7 +121,7 @@
     .chips-wrap{position:static;margin:0}
     .chip{position:absolute;animation:bob 6s ease-in-out infinite alternate}
     .chip.c1{left:5.5%;top:40%}
-    .chip.c2{left:9%;top:63%;animation-delay:1.4s}
+    .chip.c2{left:4%;top:74%;animation-delay:1.4s}
     .chip.c3{right:5.5%;top:44%;animation-delay:.8s}
   }
   @keyframes bob{from{transform:translateY(0)}to{transform:translateY(-10px)}}
@@ -267,7 +273,7 @@
   .inv .meta{margin-top:14px;color:var(--mut);font-size:.85rem;line-height:1.9}
   .inv .meta b{color:var(--ink);font-weight:600}
   .inv .paid{
-    position:absolute;right:18px;top:18px;transform:rotate(9deg);
+    position:absolute;right:16px;top:96px;transform:rotate(9deg);
     border:2px solid var(--cr2);color:var(--cr2);font-weight:900;letter-spacing:.22em;
     font-size:.78rem;padding:5px 12px;border-radius:8px;
   }
@@ -284,7 +290,7 @@
     position:relative;flex:none;
   }
   .toggle .tg::after{content:"";position:absolute;right:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#fff}
-  .mini.m2{left:-10px;bottom:-38px}
+  .mini.m2{left:-16px;bottom:-58px}
   .bars{display:flex;align-items:flex-end;gap:7px;height:44px}
   .bars i{width:13px;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--cr2),var(--cr))}
   .bars i:nth-child(1){height:38%}
